@@ -16,8 +16,8 @@ float temperatura, humedad, presion;
 SemaphoreHandle_t mutex;
 // false significa desbloqueado, esta variable maneja el bloqueo de las variables
 // credenciales del wifi
-const char *ssid = "INFINITUM3706";
-const char *password = "h7CAAXkhyz";
+const char *ssid = "";
+const char *password = "";
 const char *Server_url = "http://192.168.1.68:8000/espmon/api";
 
 // constantes
