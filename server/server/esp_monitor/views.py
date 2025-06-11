@@ -10,16 +10,18 @@ def espmon(request):
 def data(request):
     if request.method=='POST':
         datos=json.loads(request.body)
-        t=datos.get('temp')
-        h=datos.get('hum')
-        historial=hist(temperatura=t,humedad=h)
+        t=datos.get('temperatura')
+        h=datos.get('humedad')
+        p=datos.get('presion')
+        print(f"temp={t}\nhum={h}\n\n")
+        historial=hist(temperatura=t,humedad=h, presion=p)
         historial.save()
         return JsonResponse({'status':'ok'})
-    elif request.methos=='GET':
-        datos=hist.objects.order_by('fecha_hora')
+    #elif request.methos=='GET':
+        '''datos=hist.objects.order_by('fecha_hora')
         response={
             'fecha':[dato.fecha_hora.strftime('%Y-%m-%d %H:%M')for dato in datos],
             'temp':[dato.temperatura for dato in datos],
             'hum':[dato.humedad for dato in datos]
-            }
-        return JsonResponse(response)
+            }'''
+        #return JsonResponse(response)
