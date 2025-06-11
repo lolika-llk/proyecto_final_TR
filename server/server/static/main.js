@@ -1,6 +1,6 @@
 
 const currentUrl = new URL(window.location.href);
-const ip = currentUrl.searchParams.get('ip');
+const ip = currentUrl.searchParams.get('127.0.0.1:8000');
 console.log(window.location.href);
 console.log(ip);
 document.getElementById('togglePassword').addEventListener('click', function (e) {

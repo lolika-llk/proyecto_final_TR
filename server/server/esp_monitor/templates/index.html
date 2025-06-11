@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- estilo-->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
@@ -20,20 +21,28 @@
             <div class="temp">
                 <i class="fas fa-thermometer-empty tmp"></i>
                 <span class="labels tmp">Temperatura</span>
-                <span id="Temperatura" class="tmp">%TEMPERATURE%</span>
+                <span id="Temperatura" class="dat">Cargando...</span>
                 <sup>&deg;C</sup><br>
                 <div id="tempbar"></div>
             </div>
         <div>
             <i class="fas fa-tint"></i>
             <span class="labels">Humedad</span>
-            <span id="Humidity">%HUMIDITY%</span>
+            <span id="Humidity" class="dat">Cargando...</span>
             <sup>&percnt;</sup>
             <br>
             <div id="hbar"></div>
         </div>
+        <div>
+            <i class="fas fa-water"></i>
+            <span class="labels">Presion</span>
+            <span id="Pressure" class="dat">Cargando...</span>
+            <sub>Pa</sub>
+            <br>
+            <div id="pbar"></div>
+        </div>
     </div><br><br>
-    <div class="panel">
+    <!-- <div class="panel">
         <div class="inicio" id="in">
             <form>
                 <div>
@@ -57,10 +66,22 @@
             <br>
         </div>
     </div>
+-->
     <br>
-    <div class="panel">
+    <!--<div class="panel">
         <h3>Wip: Historial de mediciones</h3>
+        <canvas id="hist"></canvas>
+        <script>
+            const ctx=document.getElementById("hist");
+            new Chart(ctx,{
+                type:'line',
+                data:{
+
+                }
+            })*/
+        </script>
     </div>
+    -->
 </body>
 <footer>
     <a class="social" href="https://twitter.com/lolika_llk" title="twitter (X)">

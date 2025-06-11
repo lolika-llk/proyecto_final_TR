@@ -20,6 +20,9 @@ button:hover{
     color: rgb(239, 255, 200);
     background-color: rgb(58, 80, 81);
 }
+.dat{
+    color: rgb(30, 180, 135);
+}
 .title{
     font-size: 2.7rem;
     border-bottom: 2px solid aliceblue;
@@ -131,6 +134,11 @@ button.active{
     transition-duration: 1.5s;
 }
 #hbar{
+    background-color: aqua;
+    height: 5px;
+    transition-duration: 1.75s;
+}
+#pbar{
     background-color: aqua;
     height: 5px;
     transition-duration: 1.75s;
